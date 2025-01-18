@@ -14,13 +14,13 @@ namespace Assignment
 
             #region Q1 - Define an interface named IShape with a property Area and a method DisplayShapeInfo.Create two interfaces, ICircle and IRectangle, that inheritfrom IShape.Implement these interfaces in classes Circle and Rectangle. Testyour implementation by creating instances of both classes and displaying theirshape information.
 
-            Rectangle R = new Rectangle();
+            IRectangle R = new Rectangle();
 
             R.Area = 10;
 
             R.DisplayShapeInfo();
 
-            Circle Circle = new Circle();
+            ICircle Circle = new Circle();
 
             Circle.Area = 25;
 
