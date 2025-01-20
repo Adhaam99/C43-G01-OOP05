@@ -31,15 +31,29 @@ namespace Assignment
 
             #region Q2
 
-            IAuthenticationService User01 = new BasicAuthenticationService("Adham" , "0123456", "admin");
+            //IAuthenticationService User01 = new BasicAuthenticationService("Adham", "0123456", "admin");
 
-            Console.WriteLine(User01.AuthenticateUser("Adham", "0123456"));
+            //Console.WriteLine(User01.AuthenticateUser("Adham", "0123456"));
 
-            Console.WriteLine(User01.AuthorizeUser("Adham" , "admin"));
+            //Console.WriteLine(User01.AuthorizeUser("Adham", "admin"));
 
             #endregion
 
+            #region Q3
 
+            INotificationService email = new EmailNotificationService();
+
+            email.SendNotification("Khaled", "How are you?");
+
+            INotificationService SMS = new SmsNotificationService();
+
+            SMS.SendNotification("Adham", "I'm fine , thanks");
+
+            INotificationService notification = new PushNotificationService();
+
+            notification.SendNotification("Khaled", "New message from 'Adham' ");
+
+            #endregion
 
         }
     }
