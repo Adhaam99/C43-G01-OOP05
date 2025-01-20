@@ -4,6 +4,7 @@ using Rectangle = Assignment.Classes.Rectangle;
 using Circle = Assignment.Classes.Circle;
 using Assignment.Interfaces;
 using static System.Net.Mime.MediaTypeNames;
+using Assignment.Classes;
 
 namespace Assignment
 {
@@ -14,17 +15,27 @@ namespace Assignment
 
             #region Q1 - Define an interface named IShape with a property Area and a method DisplayShapeInfo.Create two interfaces, ICircle and IRectangle, that inheritfrom IShape.Implement these interfaces in classes Circle and Rectangle. Testyour implementation by creating instances of both classes and displaying theirshape information.
 
-            IRectangle R = new Rectangle();
+            //IRectangle R = new Rectangle();
 
-            R.Area = 10;
+            //R.Area = 10;
 
-            R.DisplayShapeInfo();
+            //R.DisplayShapeInfo();
 
-            ICircle Circle = new Circle();
+            //ICircle Circle = new Circle();
 
-            Circle.Area = 25;
+            //Circle.Area = 25;
 
-            Circle.DisplayShapeInfo();
+            //Circle.DisplayShapeInfo();
+
+            #endregion
+
+            #region Q2
+
+            IAuthenticationService User01 = new BasicAuthenticationService("Adham" , "0123456", "admin");
+
+            Console.WriteLine(User01.AuthenticateUser("Adham", "0123456"));
+
+            Console.WriteLine(User01.AuthorizeUser("Adham" , "admin"));
 
             #endregion
 
